@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create a new Record | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <h1>Mixed Vinyl</h1>
+
+    {# TODO: add an image of the record #}
+
+    <div>
+        <ul>
+            {%  for track in tracks %}
+                <li>
+                    {{ track.song }} - {{ track.artist|upper}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
